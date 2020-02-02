@@ -6,6 +6,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://cyent.github.io/markdown-with-mkdocs-material/test/</loc>
+     <lastmod>2020-02-02</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc></loc>
      
      <changefreq>daily</changefreq>
