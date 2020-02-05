@@ -11,7 +11,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
       
-        <link rel="canonical" href="https://drxgz123.github.io/lect01/">
+        <link rel="canonical" href="https://drxgz123.github.io/lect03/">
       
       
       
@@ -38,7 +38,7 @@
     
     
       
-        <title>01 Introduction and Word Vectors - 深度学习和自然语言处理.</title>
+        <title>03 Word Window Classification,Neural Networks,and Matrix Calculus - 深度学习和自然语言处理.</title>
       
     
     
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#lecture-01-introduction-and-word-vectors" tabindex="1" class="md-skip">
+      <a href="#comming-soon" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -113,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                01 Introduction and Word Vectors
+                03 Word Window Classification,Neural Networks,and Matrix Calculus
               
             </span>
           
@@ -384,76 +384,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        01 Introduction and Word Vectors
-      </label>
-    
-    <a href="./" title="01 Introduction and Word Vectors" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../lect01/" title="01 Introduction and Word Vectors" class="md-nav__link">
       01 Introduction and Word Vectors
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-plan" class="md-nav__link">
-    Lecture Plan
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#human-language-and-word-meaning" class="md-nav__link">
-    Human language and word meaning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-we-represent-the-meaning-of-a-word" class="md-nav__link">
-    How do we represent the meaning of a word?
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meaning" class="md-nav__link">
-    meaning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -473,11 +408,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../lect03/" title="03 Word Window Classification,Neural Networks,and Matrix Calculus" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="03 Word Window Classification,Neural Networks,and Matrix Calculus" class="md-nav__link md-nav__link--active">
       03 Word Window Classification,Neural Networks,and Matrix Calculus
     </a>
+    
   </li>
 
         
@@ -796,49 +740,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#lecture-plan" class="md-nav__link">
-    Lecture Plan
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#human-language-and-word-meaning" class="md-nav__link">
-    Human language and word meaning
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#how-do-we-represent-the-meaning-of-a-word" class="md-nav__link">
-    How do we represent the meaning of a word?
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#meaning" class="md-nav__link">
-    meaning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -849,21 +750,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/drxgz123/drxgz123.github.io/edit/master/docs/lect01.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/drxgz123/drxgz123.github.io/edit/master/docs/lect03.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="lecture-01-introduction-and-word-vectors">Lecture 01 Introduction and Word Vectors¶<a class="headerlink" href="#lecture-01-introduction-and-word-vectors" title="Permanent link">&para;</a></h1>
-<h2 id="lecture-plan">Lecture Plan<a class="headerlink" href="#lecture-plan" title="Permanent link">&para;</a></h2>
-<h2 id="human-language-and-word-meaning">Human language and word meaning<a class="headerlink" href="#human-language-and-word-meaning" title="Permanent link">&para;</a></h2>
-<p>人类之所以比类人猿更“聪明”，是因为我们有语言，因此是一个人机网络，其中人类语言作为网络语言。人类语言具有 信息功能 和 社会功能 。</p>
-<p>据估计，人类语言只有大约5000年的短暂历。语言是人类变得强大的主要原因。写作是另一件让人类变得强大的事情。它是使知识能够在空间上传送到世界各地，并在时间上传送的一种工具。</p>
-<p>但是，相较于如今的互联网的传播速度而言，人类语言是一种缓慢的语言。然而，只需人类语言形式的几百位信息，就可以构建整个视觉场景。这就是自然语言如此迷人的原因。</p>
-<h2 id="how-do-we-represent-the-meaning-of-a-word">How do we represent the meaning of a word?<a class="headerlink" href="#how-do-we-represent-the-meaning-of-a-word" title="Permanent link">&para;</a></h2>
-<h3 id="meaning">meaning<a class="headerlink" href="#meaning" title="Permanent link">&para;</a></h3>
-<p>用一个词、词组等表示的概念。
-一个人想用语言、符号等来表达的想法。
-表达在作品、艺术等方面的思想
-理解意义的最普遍的语言方式(linguistic way) : 语言符号与语言符号的意义的转化</p>
+                <h1 id="comming-soon">Comming Soon<a class="headerlink" href="#comming-soon" title="Permanent link">&para;</a></h1>
                 
                   
                 
@@ -885,7 +775,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../nlp-intro/" title="自然语言处理简介" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lect02/" title="02 Word Vectors 2 and Word Senses" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -894,19 +784,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                自然语言处理简介
+                02 Word Vectors 2 and Word Senses
               </span>
             </div>
           </a>
         
         
-          <a href="../lect02/" title="02 Word Vectors 2 and Word Senses" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../lect04/" title="04 Backpropagation and Computation Graphs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                02 Word Vectors 2 and Word Senses
+                04 Backpropagation and Computation Graphs
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

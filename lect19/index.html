@@ -10,20 +10,16 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       
-        <meta name="description" content="drxgz's homepage">
       
+        <link rel="canonical" href="https://drxgz123.github.io/lect19/">
       
-        <link rel="canonical" href="https://drxgz123.github.io/attention/">
-      
-      
-        <meta name="author" content="悦乐君">
       
       
         <meta name="lang:clipboard.copy" content="复制">
       
         <meta name="lang:clipboard.copied" content="已复制">
       
-        <meta name="lang:search.language" content="jp">
+        <meta name="lang:search.language" content="ja">
       
         <meta name="lang:search.pipeline.stopwords" content="True">
       
@@ -42,12 +38,18 @@
     
     
       
-        <title>Attention - 深度学习和自然语言处理.</title>
+        <title>19 Safety, Bias, and Fairness - 深度学习和自然语言处理.</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
       
     
     
@@ -69,7 +71,9 @@
     
   </head>
   
-    <body dir="ltr">
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     <svg class="md-svg">
       <defs>
@@ -83,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#attention" tabindex="1" class="md-skip">
+      <a href="#comming-soon" tabindex="1" class="md-skip">
         跳转至
       </a>
     
@@ -109,7 +113,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Attention
+                19 Safety, Bias, and Fairness
               
             </span>
           
@@ -198,7 +202,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../dl-intro/" class="md-tabs__link">
           深度学习
         </a>
       
@@ -211,7 +215,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../nlp-intro/" class="md-tabs__link">
+        <a href="../nlp-intro/" class="md-tabs__link md-tabs__link--active">
           自然语言处理
         </a>
       
@@ -278,12 +282,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       深度学习
@@ -299,75 +301,23 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Attention
-      </label>
-    
-    <a href="./" title="Attention" class="md-nav__link md-nav__link--active">
-      Attention
+  <li class="md-nav__item">
+    <a href="../dl-intro/" title="简介" class="md-nav__link">
+      简介
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    背景知识¶
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attention_1" class="md-nav__link">
-    Attention简介¶
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
+  </li>
+
         
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    很久以前¶
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
-</nav>
-    
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dl-arlg/" title="算法图谱" class="md-nav__link">
+      算法图谱
+    </a>
   </li>
 
         
@@ -380,10 +330,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       自然语言处理
@@ -411,17 +363,19 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" checked>
     
     <label class="md-nav__link" for="nav-3-2">
-      CS224n-2019学习笔记
+      CS224n-2020讲课笔记
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-3-2">
-        CS224n-2019学习笔记
+        CS224n-2020讲课笔记
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -434,6 +388,327 @@
   <li class="md-nav__item">
     <a href="../lect01/" title="01 Introduction and Word Vectors" class="md-nav__link">
       01 Introduction and Word Vectors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect02/" title="02 Word Vectors 2 and Word Senses" class="md-nav__link">
+      02 Word Vectors 2 and Word Senses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect03/" title="03 Word Window Classification,Neural Networks,and Matrix Calculus" class="md-nav__link">
+      03 Word Window Classification,Neural Networks,and Matrix Calculus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect04/" title="04 Backpropagation and Computation Graphs" class="md-nav__link">
+      04 Backpropagation and Computation Graphs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect05/" title="05 Linguistic Structure Dependency Parsing" class="md-nav__link">
+      05 Linguistic Structure Dependency Parsing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect06/" title="06 The probability of a sentence Recurrent Neural Networks and Language Models" class="md-nav__link">
+      06 The probability of a sentence Recurrent Neural Networks and Language Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect07/" title="07 Vanishing Gradients and Fancy RNNs" class="md-nav__link">
+      07 Vanishing Gradients and Fancy RNNs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect08/" title="08 Machine Translation, Sequence-to-sequence and Attention" class="md-nav__link">
+      08 Machine Translation, Sequence-to-sequence and Attention
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect09/" title="09 Practical Tips for Final Projects" class="md-nav__link">
+      09 Practical Tips for Final Projects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect10/" title="10 Question Answering and the Default Final Project" class="md-nav__link">
+      10 Question Answering and the Default Final Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect11/" title="11 ConvNets for NLP" class="md-nav__link">
+      11 ConvNets for NLP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect12/" title="12 Information from parts of words Subword Models" class="md-nav__link">
+      12 Information from parts of words Subword Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect13/" title="13 Modeling contexts of use Contextual Representations and Pretraining" class="md-nav__link">
+      13 Modeling contexts of use Contextual Representations and Pretraining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect14/" title="14 Transformers and Self-Attention For Generative Models" class="md-nav__link">
+      14 Transformers and Self-Attention For Generative Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect15/" title="15 Natural Language Generation" class="md-nav__link">
+      15 Natural Language Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect16/" title="16 Coreference Resolution" class="md-nav__link">
+      16 Coreference Resolution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect17/" title="17 Multitask Learning" class="md-nav__link">
+      17 Multitask Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect18/" title="18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment" class="md-nav__link">
+      18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="19 Safety, Bias, and Fairness" class="md-nav__link md-nav__link--active">
+      19 Safety, Bias, and Fairness
+    </a>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect20/" title="20 The Future of NLP + Deep Learning" class="md-nav__link">
+      20 The Future of NLP + Deep Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      CS224n-2020作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        CS224n-2020作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi01/" title="01 Assignment1" class="md-nav__link">
+      01 Assignment1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi02/" title="02 Assignment2" class="md-nav__link">
+      02 Assignment2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi03/" title="03 Assignment3" class="md-nav__link">
+      03 Assignment3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi04/" title="04 Assignment4" class="md-nav__link">
+      04 Assignment4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi05/" title="05 Assignment5" class="md-nav__link">
+      05 Assignment5
     </a>
   </li>
 
@@ -465,48 +740,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">目录</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    背景知识¶
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#attention_1" class="md-nav__link">
-    Attention简介¶
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    很久以前¶
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-        <li class="md-nav__item">
-          <a href="#__comments" class="md-nav__link md-nav__link--active">
-            评论
-          </a>
-        </li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -517,17 +750,10 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/drxgz123/drxgz123.github.io/edit/master/docs/attention.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/drxgz123/drxgz123.github.io/edit/master/docs/lect19.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="attention">Attention<a class="headerlink" href="#attention" title="Permanent link">&para;</a></h1>
-<h2 id="_1">背景知识¶<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>Attention是一种用于提升基于RNN（LSTM或GRU）的Encoder + Decoder模型的效果的的机制（Mechanism），一般称为Attention Mechanism。Attention Mechanism目前非常流行，广泛应用于机器翻译、语音识别、图像标注（Image Caption）等很多领域，之所以它这么受欢迎，是因为Attention给模型赋予了区分辨别的能力，例如，在机器翻译、语音识别应用中，为句子中的每个词赋予不同的权重，使神经网络模型的学习变得更加灵活（soft），同时Attention本身可以做为一种对齐关系，解释翻译输入/输出句子之间的对齐关系，解释模型到底学到了什么知识，为我们打开深度学习的黑箱，提供了一个窗口。</p>
-<p>Attention Mechanism与人类对外界事物的观察机制很类似，当人类观察外界事物的时候，一般不会把事物当成一个整体去看，往往倾向于根据需要选择性的去获取被观察事物的某些重要部分，比如我们看到一个人时，往往先Attention到这个人的脸，然后再把不同区域的信息组合起来，形成一个对被观察事物的整体印象。因此，Attention Mechanism可以帮助模型对输入的X每个部分赋予不同的权重，抽取出更加关键及重要的信息，使模型做出更加准确的判断，同时不会对模型的计算和存储带来更大的开销，这也是Attention Mechanism应用如此广泛的原因。</p>
-<h2 id="attention_1">Attention简介¶<a class="headerlink" href="#attention_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">很久以前¶<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>要么是直接使用最后一个time_step的输出
-要么是把所有time_step的输出max/average</p>
+                <h1 id="comming-soon">Comming Soon<a class="headerlink" href="#comming-soon" title="Permanent link">&para;</a></h1>
                 
                   
                 
@@ -536,22 +762,6 @@
               
                 
 
-
-  <h2 id="__comments">评论</h2>
-  <div id="disqus_thread"></div>
-  <script>
-    var disqus_config = function () {
-      this.page.url = "https://drxgz123.github.io/attention/";
-      this.page.identifier =
-        "attention/";
-    };
-    (function() {
-      var d = document, s = d.createElement("script");
-      s.src = "//https-looperxx-github-io-my-wiki.disqus.com/embed.js";
-      s.setAttribute("data-timestamp", +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
 
               
             </article>
@@ -565,7 +775,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="首页" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lect18/" title="18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -574,19 +784,19 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                首页
+                18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment
               </span>
             </div>
           </a>
         
         
-          <a href="../nlp-intro/" title="自然语言处理简介" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../lect20/" title="20 The Future of NLP + Deep Learning" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   下一页
                 </span>
-                自然语言处理简介
+                20 The Future of NLP + Deep Learning
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -601,10 +811,6 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-          <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2020 悦乐君
-          </div>
-        
         powered by
         <a href="https://www.mkdocs.org">MkDocs</a>
         and
@@ -612,15 +818,6 @@
           Material for MkDocs</a>
       </div>
       
-  <div class="md-footer-social">
-    <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
-    
-      <a href="https://github.com/looperXX" class="md-footer-social__link fa fa-github"></a>
-    
-      <a href="https://www.linkedin.com/in/%E5%95%B8-%E5%BE%90-012456163/" class="md-footer-social__link fa fa-linkedin"></a>
-    
-  </div>
-
     </div>
   </div>
 </footer>
@@ -636,6 +833,10 @@
           
             
               
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.ja.js"></script>
               
             
           
@@ -643,10 +844,6 @@
         
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
-      
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-      
-        <script src="../js/baidu-tongji.js"></script>
       
     
   </body>
