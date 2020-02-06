@@ -1,0 +1,1087 @@
+
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+        <link rel="canonical" href="https://drxgz123.github.io/intro-nlp/">
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="复制">
+      
+        <meta name="lang:clipboard.copied" content="已复制">
+      
+        <meta name="lang:search.language" content="ja">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="没有找到符合条件的结果">
+      
+        <meta name="lang:search.result.one" content="找到 1 个符合条件的结果">
+      
+        <meta name="lang:search.result.other" content="# 个符合条件的结果">
+      
+        <meta name="lang:search.tokenizer" content="[\uff0c\u3002]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>自然语言处理简介 - 深度学习和自然语言处理.</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#1" tabindex="1" class="md-skip">
+        跳转至
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://drxgz123.github.io/" title="深度学习和自然语言处理." class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              深度学习和自然语言处理.
+            </span>
+            <span class="md-header-nav__topic">
+              
+                自然语言处理简介
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            键入以开始搜索
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/drxgz123/drxgz123.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    drxgz123/drxgz123.github.io
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." class="md-tabs__link">
+        首页
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../intro-ai-ml-dl/" class="md-tabs__link">
+          深度学习
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          自然语言处理
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://drxgz123.github.io/" title="深度学习和自然语言处理." class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    深度学习和自然语言处理.
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/drxgz123/drxgz123.github.io/" title="前往 Github 仓库" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    drxgz123/drxgz123.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="首页" class="md-nav__link">
+      首页
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      深度学习
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        深度学习
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../intro-ai-ml-dl/" title="深度学习简介" class="md-nav__link">
+      深度学习简介
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      自然语言处理
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        自然语言处理
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        自然语言处理简介
+      </label>
+    
+    <a href="./" title="自然语言处理简介" class="md-nav__link md-nav__link--active">
+      自然语言处理简介
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-nlp" class="md-nav__link">
+    2. NLP与深度学习
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-nlp" class="md-nav__link">
+    3. NLP的层次分解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nlp" class="md-nav__link">
+    4. NLP的内容和技术
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-nlp" class="md-nav__link">
+    5. NLP的技术路线
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nlp" class="md-nav__link">
+    6. NLP的技术演变
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-nlp" class="md-nav__link">
+    7. NLP的技术体系
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    7.1 概率统计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    7.2 机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3 文本挖掘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    7.4深度学习
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2">
+    
+    <label class="md-nav__link" for="nav-3-2">
+      CS224n-2020讲课笔记
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        CS224n-2020讲课笔记
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect01/" title="01 Introduction and Word Vectors" class="md-nav__link">
+      01 Introduction and Word Vectors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect02/" title="02 Word Vectors 2 and Word Senses" class="md-nav__link">
+      02 Word Vectors 2 and Word Senses
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect03/" title="03 Word Window Classification,Neural Networks,and Matrix Calculus" class="md-nav__link">
+      03 Word Window Classification,Neural Networks,and Matrix Calculus
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect04/" title="04 Backpropagation and Computation Graphs" class="md-nav__link">
+      04 Backpropagation and Computation Graphs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect05/" title="05 Linguistic Structure Dependency Parsing" class="md-nav__link">
+      05 Linguistic Structure Dependency Parsing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect06/" title="06 The probability of a sentence Recurrent Neural Networks and Language Models" class="md-nav__link">
+      06 The probability of a sentence Recurrent Neural Networks and Language Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect07/" title="07 Vanishing Gradients and Fancy RNNs" class="md-nav__link">
+      07 Vanishing Gradients and Fancy RNNs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect08/" title="08 Machine Translation, Sequence-to-sequence and Attention" class="md-nav__link">
+      08 Machine Translation, Sequence-to-sequence and Attention
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect09/" title="09 Practical Tips for Final Projects" class="md-nav__link">
+      09 Practical Tips for Final Projects
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect10/" title="10 Question Answering and the Default Final Project" class="md-nav__link">
+      10 Question Answering and the Default Final Project
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect11/" title="11 ConvNets for NLP" class="md-nav__link">
+      11 ConvNets for NLP
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect12/" title="12 Information from parts of words Subword Models" class="md-nav__link">
+      12 Information from parts of words Subword Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect13/" title="13 Modeling contexts of use Contextual Representations and Pretraining" class="md-nav__link">
+      13 Modeling contexts of use Contextual Representations and Pretraining
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect14/" title="14 Transformers and Self-Attention For Generative Models" class="md-nav__link">
+      14 Transformers and Self-Attention For Generative Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect15/" title="15 Natural Language Generation" class="md-nav__link">
+      15 Natural Language Generation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect16/" title="16 Coreference Resolution" class="md-nav__link">
+      16 Coreference Resolution
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect17/" title="17 Multitask Learning" class="md-nav__link">
+      17 Multitask Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect18/" title="18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment" class="md-nav__link">
+      18 Tree Recursive Neural Networks, Constituency Parsing, and Sentiment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect19/" title="19 Safety, Bias, and Fairness" class="md-nav__link">
+      19 Safety, Bias, and Fairness
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../lect20/" title="20 The Future of NLP + Deep Learning" class="md-nav__link">
+      20 The Future of NLP + Deep Learning
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3">
+    
+    <label class="md-nav__link" for="nav-3-3">
+      CS224n-2020作业
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-3">
+        CS224n-2020作业
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi01/" title="01 Assignment1" class="md-nav__link">
+      01 Assignment1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi02/" title="02 Assignment2" class="md-nav__link">
+      02 Assignment2
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi03/" title="03 Assignment3" class="md-nav__link">
+      03 Assignment3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi04/" title="04 Assignment4" class="md-nav__link">
+      04 Assignment4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../assi05/" title="05 Assignment5" class="md-nav__link">
+      05 Assignment5
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">目录</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    1. 简介
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-nlp" class="md-nav__link">
+    2. NLP与深度学习
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-nlp" class="md-nav__link">
+    3. NLP的层次分解
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-nlp" class="md-nav__link">
+    4. NLP的内容和技术
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-nlp" class="md-nav__link">
+    5. NLP的技术路线
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-nlp" class="md-nav__link">
+    6. NLP的技术演变
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-nlp" class="md-nav__link">
+    7. NLP的技术体系
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71" class="md-nav__link">
+    7.1 概率统计
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72" class="md-nav__link">
+    7.2 机器学习
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73" class="md-nav__link">
+    7.3 文本挖掘
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#74" class="md-nav__link">
+    7.4深度学习
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/drxgz123/drxgz123.github.io/edit/master/docs/intro-nlp.md" title="编辑此页" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                  <h1>自然语言处理简介</h1>
+                
+                <h2 id="1">1. 简介<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>自然语言处理（Natural Language Processing，简称NLP）可分成“自然语言”和“处理”两部分来理解。</p>
+<p>自然语言：它是人类发展过程中形成的一种信息交流的方式，包括口语及书面语，反映了人类的思维。现在世界上所有的语种语言，都属于自然语言，包括汉语、英语、法语等。</p>
+<p>处理：如果只是人工处理的话，那我们原本就有专门的语言学来研究，也没必要特地强调“自然”。因此，这个“处理”必须是计算机处理的。但计算机毕竟不是人，无法像人一样处理文本，需要有自己的处理方式。</p>
+<p>因此自然语言处理，简单来说即是<strong>计算机接受用户自然语言形式的输入，并在内部通过人类所定义的算法进行加工、计算等系列操作，以模拟人类对自然语言的理解，并返回用户所期望的结果</strong>。它是人工智能、计算机科学、信息工程的交叉领域，涉及统计学、语言学等的知识。</p>
+<p>自然语言处理的目的在于<strong>用计算机代替人工来处理大规模的自然语言信息，以此解放人类的双手</strong>。由于语言是人类思维的证明，故自然语言处理是人工智能的最高境界，被誉为“人工智能皇冠上的明珠”</p>
+<h2 id="2-nlp">2. NLP与深度学习<a class="headerlink" href="#2-nlp" title="Permanent link">&para;</a></h2>
+<p>Deep NLP = Deep Learning + NLP</p>
+<p>将自然语言处理的思想与表示学习结合起来，用深度学习的手法解决NLP目标。</p>
+<p>层次：语音、词汇、语法、语义等；</p>
+<p>工具：词性标注、命名实体识别、句法/语义分析等（技术）；</p>
+<p>应用：机器翻译、情感分析、客服系统、问答系统等（任务）。</p>
+<p>深度学习的一个魅力之处是，它提供了一套“宇宙通用”的框架解决了各种问题。虽然工具就那么几个，但在各行各业都适用。</p>
+<h2 id="3-nlp">3. NLP的层次分解<a class="headerlink" href="#3-nlp" title="Permanent link">&para;</a></h2>
+<p>NLP的层次分解见图1：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9wk9.png" /></p>
+<p>其中：</p>
+<p>Speech：语音；</p>
+<p>Phonetic/Phonological Analysis ：语音的/语音学分析；</p>
+<p>Text：文字；</p>
+<p>OCR/Tokenization ：光学字符识别/词语切分；</p>
+<p>Morphological Analysis：词态学分析；</p>
+<p>Syntactic Analysis：句法分析；</p>
+<p>Semantic Interpretation：语义解释；</p>
+<p>Discourse Processing：篇章分析。</p>
+<h2 id="4-nlp">4. NLP的内容和技术<a class="headerlink" href="#4-nlp" title="Permanent link">&para;</a></h2>
+<p>NLP的内容和技术见图2：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c90YR.png" /></p>
+<p>由上可知，NLP的内容分为词、句、文、生四大任务，蕴含“道生一，一生二，二生三，三生万物”的道理。</p>
+<h2 id="5-nlp">5. NLP的技术路线<a class="headerlink" href="#5-nlp" title="Permanent link">&para;</a></h2>
+<p>现在NLP的技术路线就是预训练+微调，见图3：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9rSx.png" /></p>
+<p>其中，按照训练方法和数据类型的不同，各种模型的分类见图4：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9y6K.png" /></p>
+<h2 id="6-nlp">6. NLP的技术演变<a class="headerlink" href="#6-nlp" title="Permanent link">&para;</a></h2>
+<p>NLP的技术框架和模型演变逻辑如图5：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c96OO.png" /></p>
+<h2 id="7-nlp">7. NLP的技术体系<a class="headerlink" href="#7-nlp" title="Permanent link">&para;</a></h2>
+<p>NLP的技术是一个庞大的体系，它分为以下四个部分：</p>
+<h3 id="71">7.1 概率统计<a class="headerlink" href="#71" title="Permanent link">&para;</a></h3>
+<p>包括5个分支：基础 (Basic) 、采样 (Sampling) 、信息理论 (Information Theory) 、模型 (Model) 、贝叶斯 (Bayesian) ，见图6：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c920e.png" /></p>
+<p>图6：NLP的技术体系-概率统计部分</p>
+<h3 id="72">7.2 机器学习<a class="headerlink" href="#72" title="Permanent link">&para;</a></h3>
+<p>包括7个分支：线性回归 (Linear Regression) 、逻辑回归 (Logistic Regression) 、正则化 (Regularization) 、非概率 (Non-Probabilistic) 、聚类 (Clustering) 、降维 (Dimensionality Reduction) 、训练 (Training) ，见图7：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9RTH.png" /></p>
+<p>图7：NLP的技术体系-机器学习部分</p>
+<h3 id="73">7.3 文本挖掘<a class="headerlink" href="#73" title="Permanent link">&para;</a></h3>
+<p>包括6个分支：基本流程 (Basic Procedure) 、图 (Graph) 、文档 (Document) 、词嵌入 (Word Embedding)、序列标注 (Sequential Labeling) 、NLP基本假设 (NLP Basic Hypothesis) ，见图8：</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9htA.png" /></p>
+<p>图8：NLP的技术体系-文本挖掘部分</p>
+<h3 id="74">7.4深度学习<a class="headerlink" href="#74" title="Permanent link">&para;</a></h3>
+<p>包括4个分支（见图9）：</p>
+<p>一是基础 (Basic) ，详细梳理了NLP常用的几类网络：循环模型、卷积模型和递归模型；</p>
+<p>二是语言模型 (Language Model) ，包含了编码器-解码器模型，以及词表征到上下文表征(Word Representation to Contextual Representation) 这两部分，许多著名模型，比如BERT和XLNet，都是在这里得到了充分拆解，也是需要努力学习的内容；</p>
+<p>三是分布式表征 (Distributed Representation) ，许多常用的词嵌入方法都在这里，包括GloVe和Word2Vec。</p>
+<p>四是任务 (Task) ，机器翻译、问答、阅读理解、情绪分析……</p>
+<p><img alt="" src="https://s2.ax1x.com/2020/02/06/1c9Ipt.png" /></p>
+<p>图9：NLP的技术体系-深度学习部分</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../intro-ai-ml-dl/" title="深度学习简介" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                深度学习简介
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../lect01/" title="01 Introduction and Word Vectors" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                01 Introduction and Word Vectors
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+                <script src="../assets/javascripts/lunr/tinyseg.js"></script>
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.ja.js"></script>
+              
+            
+          
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
